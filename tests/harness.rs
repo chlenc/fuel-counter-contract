@@ -24,7 +24,7 @@ async fn do_increment() {
     let mathods = instance.methods();
     let params = TxParameters::default()
         .set_gas_price(1)
-        .set_gas_limit(10_000_000);
+        .set_gas_limit(100_000_000);
 
     mathods.increment().tx_params(params).call().await.unwrap();
 }
